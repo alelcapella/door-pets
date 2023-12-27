@@ -6,11 +6,12 @@ import { LockService } from '../services/lock-service';
 @Injectable({
   providedIn: 'root'
 })
-export class PermissionsService {
+export class PermissionsHouseService {
 
   constructor(
     private lockService: LockService,
     private router: Router
+    
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> {
@@ -36,9 +37,9 @@ export class PermissionsService {
   providedIn: 'root'
 })
 export class HouseAuthGuard implements CanActivate {
-  constructor(private permissionsService: PermissionsService) { }
+  constructor(private permissionsHouseService: PermissionsHouseService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    return this.permissionsService.canActivate(route, state);
+    return this.permissionsHouseService.canActivate(route, state);
   }
 }

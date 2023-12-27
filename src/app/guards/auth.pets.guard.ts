@@ -6,7 +6,7 @@ import { LockService } from '../services/lock-service';
 @Injectable({
   providedIn: 'root'
 })
-export class PermissionsService {
+export class PermissionsPetsService {
 
   constructor(
     private lockService: LockService,
@@ -30,9 +30,9 @@ export class PermissionsService {
   providedIn: 'root'
 })
 export class PetsAuthGuard implements CanActivate {
-  constructor(private permissionsService: PermissionsService) { }
+  constructor(private permissionsPetsService: PermissionsPetsService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    return this.permissionsService.canActivate(route, state);
+    return this.permissionsPetsService.canActivate(route, state);
   }
 }
