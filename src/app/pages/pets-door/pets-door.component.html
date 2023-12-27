@@ -1,0 +1,20 @@
+<div class="door-container">
+    <h1>Coloque a senha: 28091998 para abrir o cadeado e em seguida a porta.</h1>
+    <div class="password-lock">
+        <mat-icon aria-hidden="false">{{ passwordIcon }}</mat-icon>
+        <div id="keypad">
+            <input matInput type="button" value="7" onclick="$('num').value+=7;" />
+            <input type="button" value="8" (click)="handleKeypadButtonClick('8')" />
+            <input type="button" value="9" (click)="handleKeypadButtonClick('9')" /><br />
+            <input type="button" value="4" (click)="handleKeypadButtonClick('4')" />
+            <input type="button" value="5" (click)="handleKeypadButtonClick('5')" />
+            <input type="button" value="6" (click)="handleKeypadButtonClick('6')" /><br />
+            <input type="button" value="1" (click)="handleKeypadButtonClick('1')" />
+            <input type="button" value="2" (click)="handleKeypadButtonClick('2')" />
+            <input type="button" value="3" (click)="handleKeypadButtonClick('3')" /><br />
+            <input type="button" value="0" (click)="handleKeypadButtonClick('0')" />
+            <input type="button" value="Reset" (click)="resetPassword()" />
+        </div>
+    </div>
+    <img src="assets/img/door.png" alt="Imagem de uma porta branca com 1 cadeado e teclado para senha." />
+</div>

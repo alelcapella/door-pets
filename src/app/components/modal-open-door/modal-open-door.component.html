@@ -1,0 +1,9 @@
+<mat-dialog-content>
+    <button class="close-icon" [mat-dialog-close]="true">
+        <mat-icon aria-hidden="false" fontIcon="close"></mat-icon>
+    </button>
+    <div class="modal-open">
+        <p>{{ data.dialogText }}</p>
+        <button (click)="goToNextPage()"> {{ data.buttonText }} </button>
+    </div>
+</mat-dialog-content>

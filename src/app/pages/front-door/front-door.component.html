@@ -1,0 +1,17 @@
+<div class="door-container">
+    <h1>Clique nos 3 cadeados pequenos para abrir o cadeado grande e em seguida abrir a porta.</h1>
+
+    <div class="small-locks">
+        <button *ngFor="let icon of icons; let i = index" (click)="toggleLock(i)">
+            <mat-icon aria-hidden="false">{{ icon }}</mat-icon>
+        </button>
+    </div>
+
+    <div class="big-lock">
+        <button>
+            <mat-icon aria-hidden="false">{{ bigLockIcon }}</mat-icon>
+        </button>
+    </div>
+
+    <img src="assets/img/door.png" alt="Imagem de uma porta branca com 3 cadeados pequenos e um grande." />
+</div>

@@ -1,0 +1,27 @@
+.small-locks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    left: 48%;
+
+    .mat-icon,
+    .material-icons {
+        height: 48px;
+        width: 48px;
+        font-size: 48px;
+    }
+}
+
+.big-lock {
+    position: absolute;
+    top: 65%;
+    left: 47%;
+
+    .mat-icon,
+    .material-icons {
+        height: 78px;
+        width: 78px;
+        font-size: 78px;
+    }
+}

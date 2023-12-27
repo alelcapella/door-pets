@@ -1,0 +1,10 @@
+<div class="door-container">
+    <h1>Clique nos 4 cadeados das extremidades para abrir e no cadeado central para fechar, e em seguida abrir a porta.
+    </h1>
+    <div class="house-lock">
+        <button *ngFor="let icon of houseIcon; let i = index" (click)="toggleLockHouse(i)">
+            <mat-icon aria-hidden="false">{{ icon }}</mat-icon>
+        </button>
+    </div>
+    <img src="assets/img/door.png" alt="Imagem de uma porta branca com 5 cadeados." />
+</div>
