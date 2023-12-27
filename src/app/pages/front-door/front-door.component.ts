@@ -19,7 +19,7 @@ export class FrontDoorComponent implements OnInit {
   bigLockIcon: string = '';
   dialogRef: any;
 
-  constructor(private lockService: LockService, public dialog: MatDialog, private modalService: ModalService) { }
+  constructor(private lockService: LockService, public dialog: MatDialog, public modalService: ModalService) { }
 
   ngOnInit(): void {
     this.lockService.getSmallLocks().subscribe(locks => this.icons = locks);
