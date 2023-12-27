@@ -51,7 +51,7 @@ export class PetsDoorComponent {
       enterAnimationDuration,
       exitAnimationDuration,
       data: {
-        dialogText: 'A porta de abriu, hora de alimentar seus gatinhos',
+        dialogText: 'A porta abriu, hora de alimentar seus gatinhos',
         buttonPath: '/cats-room',
         buttonText: 'Próxima Porta'
       }
