@@ -4,11 +4,12 @@ import { LockService } from '../../services/lock-service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalService } from '../../services/modal-service';
 import { ModalOpenDoorComponent } from '../../components/modal-open-door/modal-open-door.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pets-door',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [MatIconModule, CommonModule],
   templateUrl: './pets-door.component.html',
   styleUrls: ['./pets-door.component.scss']
 })

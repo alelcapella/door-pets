@@ -3,7 +3,7 @@
     </h1>
     <div class="house-lock">
         <button *ngFor="let icon of houseIcon; let i = index" (click)="toggleLockHouse(i)">
-            <mat-icon aria-hidden="false">{{ icon }}</mat-icon>
+            <mat-icon [ngClass]="{'change-color': (i !== 2 && icon === 'lock_open') || (i === 2 && icon === 'lock')}" aria-hidden="false">{{ icon }}</mat-icon>
         </button>
     </div>
     <img src="assets/img/door.png" alt="Imagem de uma porta branca com 5 cadeados." />

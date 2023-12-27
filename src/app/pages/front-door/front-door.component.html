@@ -3,13 +3,13 @@
 
     <div class="small-locks">
         <button *ngFor="let icon of icons; let i = index" (click)="toggleLock(i)">
-            <mat-icon aria-hidden="false">{{ icon }}</mat-icon>
+            <mat-icon [ngClass]="{'change-color': icon === 'lock_open'}" aria-hidden="false">{{ icon }}</mat-icon>
         </button>
     </div>
 
     <div class="big-lock">
         <button>
-            <mat-icon aria-hidden="false">{{ bigLockIcon }}</mat-icon>
+            <mat-icon [ngClass]="{'change-color': bigLockIcon === 'lock_open'}" aria-hidden="false">{{ bigLockIcon }}</mat-icon>
         </button>
     </div>
 

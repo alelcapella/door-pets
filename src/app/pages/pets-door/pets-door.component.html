@@ -1,7 +1,7 @@
 <div class="door-container">
     <h1>Coloque a senha: 28091998 para abrir o cadeado e em seguida a porta.</h1>
     <div class="password-lock">
-        <mat-icon aria-hidden="false">{{ passwordIcon }}</mat-icon>
+        <mat-icon [ngClass]="{'change-color': passwordIcon === 'lock_open'}" aria-hidden="false">{{ passwordIcon }}</mat-icon>
         <div id="keypad">
             <input matInput type="button" value="7" onclick="$('num').value+=7;" />
             <input type="button" value="8" (click)="handleKeypadButtonClick('8')" />
