@@ -18,14 +18,14 @@ export const routes: Routes = [
         loadChildren: () =>
             import('./pages/pets-door/pets-door-routing.module').then(
                 (m) => m.PetsDoorRoutingModule
-            ), canActivate: [HouseAuthGuard]
+            )
     },
     {
         path: 'cats-room',
         loadChildren: () =>
             import('./pages/cats-room/cats-room-routing.module').then(
                 (m) => m.CatsRoomRoutingModule
-            ), canActivate: [PetsAuthGuard]
+            )
     },
     { path: '**', redirectTo: '' }
 ];
